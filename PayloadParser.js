@@ -12,4 +12,7 @@ function parseUplink(device, payload)
     if (temperatureSensor != null){
         humiditySensor.updateHumiditySensorStatus(parsed.field4);   
     }
+
+    device.updateDeviceRssi({ strength: -50 });
+    device.updateDeviceBattery({ voltage: 2.95 });
 }
